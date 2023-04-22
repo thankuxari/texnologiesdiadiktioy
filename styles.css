@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    height: 100%;
+    min-height: 100vh;
+}
+
+header{
+    font-family: 'Montserrat',sans-serif;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 6.5em;
+    border-bottom: 3px solid black;
+}
+
+header .main-title{
+    font-size: 2.5rem;
+    color:black;
+    text-transform: uppercase;
+    font-family: 'Overpass',sans-serif;
+}
+
+header .main-nav{
+    display: flex;
+    gap:2em;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    color:white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color:#b09372;
+    transition: color 0.3s;
+}
+
+    .main-nav a:hover,
+    .main-nav a:active{
+        color:white;
+    }
+
+.buttons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1em;
+}
+
+.buttons-container .login-btn{
+    padding:1em 2em;
+    font-size: 1rem;
+    border: none;
+    border-radius: 3em;
+    font-weight: bold;
+    background-color: #B3A580;
+    cursor: pointer;
+    transition: background-color 0.3s,border 0.3s,color 0.3s;
+}
+
+    .login-btn:hover{
+        background-color: #6a5f40;
+        color:white;
+    }
+
+.buttons-container .theme-btn{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2em;
+    width: 5em;
+    background-color: #B3A580;
+    border-radius: 2em;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: left 0.3s;
+}
+
+    .theme-btn:before{
+        content:"";
+        position: absolute;
+        height: 1.6em;
+        width: 1.8em;
+        background-color: #d5d5d5;
+        background-image: url(brightness.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 15px;
+        background-position: center;
+        border-radius: 50%;
+        top:0.2em;
+        left:0.2em;
+    }
+
+    .theme-btn:checked{
+        background-color: #6a5f40;
+    }
+
+    .theme-btn:checked:before{
+        left:3em;
+    }
+
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container{
+    width: 90%;
+    height: 25em;
+    background-color: #cfbba1;
+    margin:2em;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1em;
+}
+
+.search-container label{
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 800;
+    font-family: 'Overpass',sans-serif;
+}
+
+.searchbar{
+    width: 30%;
+    display: flex;
+}
+
+.searchbar input{
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: 1.8em 0em 0em 1.8em;
+    font-size: 1.1rem;
+}
+
+    .searchbar input:active{
+        border: none;
+    }
+
+.searchbar button{
+    border: none;
+    padding: 1em;
+    border-radius:0em 1.8em 1.8em 0em;
+    cursor: pointer;
+}
+
+.accordion-container{
+    width: 90%;
+    height: 25em;
+    background-color: #cfbba1;
+    border-radius: 2em;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:2em;
+    gap:5em;
+}
+
+.left-container{
+    margin-left:7em;
+    width: 51%;
+    display: flex;
+    flex-direction: column;
+    gap:1.5em;
+}
+
+.accordion{
+    width: 38em;
+    padding:1em;
+    background-color: #fff;
+    border-radius: 0.8em;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+}
+
+.accordion .accordion-header{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.accordion-header h4{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 1.1rem;
+}
+
+.accordion-header .icon-btn{
+    display: flex;
+    background-color: #d5d5d5;
+    border-radius: 0.2em;
+    justify-content: center;
+    align-items: center;
+    padding:0.2em;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+}
+
+    .item-icon i {
+        transition:all .35s ease-in-out;
+    }
+
+.active i {
+    transform: rotate(180deg);
+}
+
+.accordion-answer{
+    max-height: 0;
+    overflow:hidden;
+    transition:all 300ms;
+    opacity: .9;
+    font-family: 'Montserrat',sans-serif;
+}
+
+.right-container{
+    width: 49%;
+    display: flex;
+    justify-content: center;
+}
+
+.right-container img{
+    object-fit: cover;
+    border-radius: 1.1em;
+    border:8px solid black;
+}
+
+@media (max-width:800px){
+    header{
+        width: 100%;
+    }
+
+    header .Main-Title{
+        font-size:2rem;
+        text-align: center;
+        color:blue;
+    }
+
+    header .Main-Nav{
+        display: none;
+    }
+}
+
