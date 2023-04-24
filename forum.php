@@ -36,8 +36,9 @@
         </ul>
         </nav>
         <div class="buttons-container">
-        <button class="login-btn" id="loginButton" onclick="window.location.href='login.php'">Login</button>
-        <input type="checkbox" id="theme-Picker" class="theme-btn" <?php if($_COOKIE["theme"]  == "dark") {echo "checked"; }?>>
+            <button class="sign-btn" id="signButton" onclick="window.location.href='sign.php'">Sign in</button>
+            <button class="login-btn" id="loginButton" onclick="window.location.href='login.php'">Login</button>
+            <input type="checkbox" id="theme-Picker" class="theme-btn" <?php if($_COOKIE["theme"]  == "dark") {echo "checked"; }?>>
         </div>
     </header>
     <main>

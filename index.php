@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css?v=<?php echo time(); ?>">
     <link href="https://cdn.jsdelivr.net/gh/codeOpacity/op_icons@main/op_icons.all.min.css" rel="stylesheet">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="earth.png">
@@ -37,8 +37,9 @@
         </ul>
         </nav>
         <div class="buttons-container">
-        <button class="login-btn" id="loginButton" onclick="window.location.href='login.php'">Login</button>
-        <input type="checkbox" id="theme-Picker" class="theme-btn" <?php if($_COOKIE["theme"]  == "dark") {echo "checked"; }?>>
+            <button class="sign-btn" id="signButton" onclick="window.location.href='sign.php'">Sign in</button>
+            <button class="login-btn" id="loginButton" onclick="window.location.href='login.php'">Login</button>
+            <input type="checkbox" id="theme-Picker" class="theme-btn" <?php if($_COOKIE["theme"]  == "dark") {echo "checked"; }?>>
         </div>
     </header>
     <main>
@@ -76,13 +77,16 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi totam dolore iure, quisquam consectetur cupiditate laborum porro fugit impedit quam pariatur, voluptates similique voluptatem voluptatum eligendi distinctio! Voluptatem, similique consequatur.
                         </p>
                     </div>
-            </div>
+                </div>
             </div>
             <div class="right-container">
                 <img src="5c5791f20a4bc8fcd71cd572806f570c.jpg">
             </div>
         </div>
     </main>
+    <footer>
+
+    </footer>
 
     <script>
         $("#theme-Picker").on('change',function(){
@@ -99,5 +103,6 @@
     </script>
 
     <script src="accordion.js"></script>
+
 </body>
 </html>

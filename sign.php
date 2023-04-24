@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css?v=<?php echo time(); ?>">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="earth.png">
-    <title>Είσοδος | Τεχνολογίες Διαδικτύου | Διαδικτυακή Κοινότητα </title>
+    <title>Έγγραφη | Τεχνολογίες Διαδικτύου | Διαδικτυακή Κοινότητα </title>
 </head>
 
 <?php
@@ -24,7 +24,8 @@
     }
 
 ?>
-<body style="background-color:<?php echo $background?>">
+
+<body style="background-color:<?php echo $background?>" class="login-body">
     <header style="background-color:<?php echo $backgroundheader?>">
         <h1 class="main-title" style="color: <?php echo $color?>">Τεχνολογιες Διαδικτυου</h1>
         <nav>
@@ -41,13 +42,21 @@
             <input type="checkbox" id="theme-Picker" class="theme-btn" <?php if($_COOKIE["theme"]  == "dark") {echo "checked"; }?>>
         </div>
     </header>
-    <main class="login-main">
-        <div class="login-container" style="background-color:<?php echo $backgroundheader?>">
-            <form>
-                <h1>Είσοδος</h1>
-                <input type="text" name="name" placeholder="Username">
+    <main class="sign-main">
+        <div class=sign-container style="background-color:<?php echo $backgroundheader?>">
+            <form action="" method="post">
+                <h1 style="color:<?php echo $color?>">Εγγραφή</h1>
+                <label for="name">Όνομα:</label>
+                <input type="text" name="name" placeholder="Όνομα">
+                <label for="surname">Επώνυμο</label>
+                <input type="text" name="surname" placeholder="Επώνυμο">
+                <label for="username">Username:</label>
+                <input type="username" name="username" placeholder="Username">
+                <label for="password">Password:</label>
                 <input type="password" name="password" placeholder="Password">
-                <input type="submit" name="submit" value="Είσοδος">
+                <label for="email">Email:</label>
+                <input for="email" name="email" placeholder="Email">
+                <input type="submit" name="submit" value="Εγγραφή">
             </form>
         </div>
     </main>
