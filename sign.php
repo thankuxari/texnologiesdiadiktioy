@@ -44,18 +44,18 @@
     </header>
     <main class="sign-main">
         <div class=sign-container style="background-color:<?php echo $backgroundheader?>">
-            <form action="" method="post">
+            <form action="includes/sign_includes.php" method="post">
                 <h1 style="color:<?php echo $color?>">Εγγραφή</h1>
                 <label for="name">Όνομα:</label>
                 <input type="text" name="name" placeholder="Όνομα">
                 <label for="surname">Επώνυμο</label>
                 <input type="text" name="surname" placeholder="Επώνυμο">
                 <label for="username">Username:</label>
-                <input type="username" name="username" placeholder="Username">
+                <input type="text" name="username" placeholder="Username">
                 <label for="password">Password:</label>
                 <input type="password" name="password" placeholder="Password">
                 <label for="email">Email:</label>
-                <input for="email" name="email" placeholder="Email">
+                <input for="text" name="email" placeholder="Email">
                 <input type="submit" name="submit" value="Εγγραφή">
             </form>
         </div>

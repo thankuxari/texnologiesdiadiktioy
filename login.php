@@ -43,7 +43,7 @@
     </header>
     <main class="login-main">
         <div class="login-container" style="background-color:<?php echo $backgroundheader?>">
-            <form>
+            <form action="includes/login_includes.php" method="post">
                 <h1>Είσοδος</h1>
                 <input type="text" name="name" placeholder="Username">
                 <input type="password" name="password" placeholder="Password">
