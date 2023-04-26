@@ -3,11 +3,9 @@
     //File gia na kanw control to database
     class LoginContr extends Login{
 
-        private $name;
-        private $surname;
         private $username;
         private $password;
-        private $email;
+
     
         public function __construct($username,$password){
             
@@ -23,6 +21,7 @@
                 header("location: ../index.php?error=emptyInput");
                 exit();
             }
+            
             $this->getUser($this->username,$this->password);
         }
 
