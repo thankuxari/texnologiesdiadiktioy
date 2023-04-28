@@ -1,67 +1,17 @@
 <?php
 
-    session_start();
+    include('header.php');
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css?v=<?php echo time(); ?>">
-    <link href="https://cdn.jsdelivr.net/gh/codeOpacity/op_icons@main/op_icons.all.min.css" rel="stylesheet">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="icon" type="image/png" sizes="32x32" href="earth.png">
-    <title>Αρχική | Τεχνολογίες Διαδικτύου | Διαδικτυακή Κοινότητα </title>
-</head>
-
-<?php
-
-    if($_COOKIE["theme"] == "dark") {
-        $background = "#1A120B";
-        $backgroundheader = "#3C2A21";
-        $color = "white";
-        $colornav = "#d2b593";
-        $searchcolor = "#b09372";
-    } else {
-        $background = "#E5E5CB";
-        $backgroundheader = "#D5CEA3";
-    }
-
-?>
+<title>Αρχική | Τεχνολογίες Διαδικτύου | Διαδικτυακή Κοινότητα </title>
 <body style="background-color:<?php echo $background?>">
-    <header style="background-color:<?php echo $backgroundheader?>">
-        <h1 class="main-title" style="color: <?php echo $color?>">Τεχνολογιες Διαδικτυου</h1>
-        <nav>
-        <ul class="main-nav">
-            <li><a href="index.php"">Αρχικη</a></li>
-            <li><a href="help.php">Βοηθεια</a></li>
-            <li><a href="forum.php">Φορουμ</a></li>
-            <li><a href="search.php">Αναζητηση</a></li>
-        </ul>
-        </nav>
-        <div class="buttons-container">
-            <?php
-                if(isset($_SESSION["userud"]))
-                {
-            ?>
-                <buttton class="sign-btn" id="signButton" onclick="window.location.href='#'"><?php echo $_SESSION["userud"];?></buttton>
-                <button class="login-btn" id="loginButton" onclick="window.location.href='includes/logout_includes.php'">Logout</button>        
-            <?php
-                }
-                else
-                {
-            ?>
-                <button class="sign-btn" id="signButton" onclick="window.location.href='sign.php'">Sign in</button>
-                <button class="login-btn" id="loginButton" onclick="window.location.href='login.php'">Login</button>
-            <?php
-                }
-            ?>
-            <input type="checkbox" id="theme-Picker" class="theme-btn" <?php if($_COOKIE["theme"]  == "dark") {echo "checked"; }?>>
-        </div>
-    </header>
+
+    <?php
+
+        include('header-navbar.php');
+
+    ?>
+
     <main>
         <div class=search-container style="background-color: <?php echo $searchcolor?>">
             <label for="search" style="color:<?php echo $color?>">Αναζήτηση</label>
@@ -104,6 +54,7 @@
             </div>
         </div>
     </main>
+    
     <footer>
 
     </footer>

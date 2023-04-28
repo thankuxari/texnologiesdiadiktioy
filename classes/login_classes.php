@@ -55,6 +55,9 @@
                 session_start();
                 $_SESSION["userid"] = $user[0]["user_id"];
                 $_SESSION["userud"] = $user[0]["user_username"];
+                $_SESSION["user_surname"] = $user[0]["user_surname"];
+                $_SESSION["user_name"] = $user[0]["user_name"];
+                $_SESSION["user_email"] = $user[0]["user_email"];
 
             }
             
