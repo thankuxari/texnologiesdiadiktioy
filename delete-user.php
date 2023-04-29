@@ -25,28 +25,16 @@
         include('header-navbar.php');
 
     ?>
-    <main class="user-profile-main">
-       <div class="profile-container">
-            <h1 class="username-title"><?php echo $_SESSION["userud"]?></h1>
-            <div class="name-surname-container">
-                <div class="line">
-                    <h2>Όνομα:</h2>
-                    <p><?php echo $_SESSION["user_name"]?></p>
-                </div>
-                <div class="line">
-                    <h2>Επίθετο:</h2>
-                    <p><?php echo $_SESSION["user_surname"]?></p>
-                </div>
-            </div>
-            <div class="email-container">
-                <h2>Email:</h2>
-                <p><?php echo $_SESSION["user_email"]?></p>
-            </div>
+    <main class="delete-user-main">
+       <div class="delete-user-container">
+            <p>Είσαι σίγουρος/η πως θες να διαγράψεις τον λογαριασμό σου ?</p>
             <div class="btn-container">
-                <button class="edit-btn btn" onclick="window.location.href='edit-user.php?id=<?php echo $_SESSION['userid']?>'">Edit</button>
-                <button class="delete-btn btn" onclick="window.location.href='delete-user.php'">Delete</button>
+                <form action="includes/delete_includes.php" method="post">
+                    <input class="yes-btn btn" type="submit" name="submit" value="Ναί">
+                </form>
+                <button class="no-btn btn" name="no-btn" onclick="window.location.href='user-profile.php'">Όχι</button>
             </div>
-        </div>
+       </div>
     </main>
     <footer>
 
