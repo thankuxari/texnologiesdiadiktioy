@@ -43,7 +43,7 @@
                 <p><?php echo $_SESSION["user_email"]?></p>
             </div>
             <div class="btn-container">
-                <button class="edit-btn btn" onclick="window.location.href='edit-user.php?id= <?php echo $_SESSION['userid']?>'">Edit</button>
+                <button class="edit-btn btn" onclick="window.location.href='edit-user.php?id=<?php echo $_SESSION['userid']?>'">Edit</button>
                 <button class="delete-btn btn" onclick="window.location.href='delete.php'">Delete</button>
             </div>
         </div>

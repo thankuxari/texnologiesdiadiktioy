@@ -1,20 +1,8 @@
 <?php
 
-    session_start();
+    include('header.php');
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="icon" type="image/png" sizes="32x32" href="earth.png">
-    <title>Είσοδος | Τεχνολογίες Διαδικτύου | Διαδικτυακή Κοινότητα </title>
-</head>
 
 <?php
 
@@ -31,36 +19,11 @@
 
 ?>
 <body style="background-color:<?php echo $background?>">
-    <header style="background-color:<?php echo $backgroundheader?>">
-        <h1 class="main-title" style="color: <?php echo $color?>">Τεχνολογιες Διαδικτυου</h1>
-        <nav>
-        <ul class="main-nav">
-            <li><a href="index.php">Αρχικη</a></li>
-            <li><a href="help.php">Βοηθεια</a></li>
-            <li><a href="forum.php">Φορουμ</a></li>
-            <li><a href="search.php">Αναζητηση</a></li>
-        </ul>
-        </nav>
-        <div class="buttons-container">
-            <?php
-                if(isset($_SESSION["userud"]))
-                {
-            ?>
-                <button class="sign-btn" id="signButton" onclick="window.location.href='sign.php'"><?php echo $SESSION["user_username"];?></button>
-                <button class="login-btn" id="loginButton" onclick="window.location.href='login.php'">Logout</button>        
-            <?php
-                }
-                else
-                {
-            ?>
-                <button class="sign-btn" id="signButton" onclick="window.location.href='sign.php'">Sign in</button>
-                <button class="login-btn" id="loginButton" onclick="window.location.href='login.php'">Login</button>
-            <?php
-                }
-            ?>
-            <input type="checkbox" id="theme-Picker" class="theme-btn" <?php if($_COOKIE["theme"]  == "dark") {echo "checked"; }?>>
-        </div>
-    </header>
+    <?php
+    
+        include('header-navbar.php');
+
+    ?>
     <main class="login-main">
         <div class="login-container" style="background-color:<?php echo $backgroundheader?>">
             <form action="includes/login_includes.php" method="post">

@@ -7,7 +7,6 @@
         {
             
             //"Psaxnw" to username kai to password sto database gia na kanw login
-
             $query = $this->connect()->prepare("SELECT user_password FROM users WHERE user_username = ? OR user_email = ? ;");
 
             if(!$query->execute(array($username,$password)))
