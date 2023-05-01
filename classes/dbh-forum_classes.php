@@ -1,7 +1,7 @@
 <?php
 
-    //File gia na kanw sindesi me to database
-    class Dbh_forum {
+    //File gia na kanw sindesi me to database forumdb
+    class Dbh_forum{
         
         protected function connect()
         {

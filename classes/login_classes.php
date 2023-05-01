@@ -1,6 +1,6 @@
 <?php
     include('classes/dbh_classes.php');
-    //File me to opoio trexw ta query gia to database
+    
 
     class Login extends Dbh{
         public function getUser($username,$password)
@@ -15,7 +15,7 @@
                 header("location: ../index.php?error=queryloginfailed");
                 exit();
             }
-
+            //ama to query einai mikrotero apo toy 1 simenei oti den yparxei o xristis sto database
             if($query->rowCount() == 0)
             {
                 $query = null;
@@ -26,6 +26,9 @@
             $hash = $query->fetchAll(PDO::FETCH_ASSOC);
             $passwordMatch = password_verify($password,$hash[0]["user_password"]);
 
+            /*elenxos ama to hash poy moy edwse o xristis apo to 
+              login form einai iso me to hash poy vriskete sto database
+            */
             if($passwordMatch == false)
             {
                 $query = null;
@@ -35,6 +38,8 @@
             elseif($passwordMatch == true){
                 $query = $this->connect()->prepare("SELECT * FROM users WHERE user_username = ? OR user_email = ? AND user_password = ?;");
             
+
+                //dinw ston xristi  tin dinatotita na sindethei eite me to username toy h me to email toy
                 if(!$query->execute(array($username,$username,$password)))
                 {
                     $query = null;
@@ -52,6 +57,7 @@
                 $user = $query->fetchAll(PDO::FETCH_ASSOC);
 
                 session_start();
+
                 $_SESSION["userid"] = $user[0]["user_id"];
                 $_SESSION["userud"] = $user[0]["user_username"];
                 $_SESSION["user_surname"] = $user[0]["user_surname"];

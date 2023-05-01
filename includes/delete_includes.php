@@ -1,10 +1,8 @@
 <?php
 
-    /*SIGN_INCLUDE file me to opoio "mazevw" ta data gia na ta kanw handle
-    argotera me ta classes ena Login System*/
-
     if(isset($_POST["submit"]))
     {
+        //Dimioyrgw random data gia na ta kanw update sto database
         $name = substr(md5(rand()), 0, 7);
         $surname = substr(md5(rand()), 0, 7);
         $username = substr(md5(rand()), 0, 7);

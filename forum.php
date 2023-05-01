@@ -4,20 +4,6 @@
 
 ?>
 <title>Φόρουμ | Τεχνολογίες Διαδικτύου | Διαδικτυακή Κοινότητα </title>
-<?php
-
-    if($_COOKIE["theme"] == "dark") {
-        $background = "#1A120B";
-        $backgroundheader = "#3C2A21";
-        $color = "white";
-        $colornav = "#d2b593";
-        $searchcolor = "#b09372";
-    } else {
-        $background = "#E5E5CB";
-        $backgroundheader = "#D5CEA3";
-    }
-
-?>
 <body style="background-color:<?php echo $background?>">
     <?php
 
@@ -25,7 +11,7 @@
 
     ?>
     <main class="forum-main">
-        <div class="forum-wrapper">
+        <div class="forum-wrapper" style="background:<?php echo $insidecolor?>">
             <div class="forum-container">
                 <?php
                     if(isset($_SESSION["userud"]))
@@ -50,9 +36,9 @@
                 ?>
                 <table border="3" cellpading="5" cellspacing="5">
                     <tr>
-                        <th>Title:</th>
-                        <th>Creator:</th>
-                        <th>Date:</th>
+                        <th>Τίτλος:</th>
+                        <th>Δημιουργός:</th>
+                        <th>Ημερομηνία:</th>
                     </tr>
                 <?php
                 
@@ -60,7 +46,7 @@
                     {
                 ?>
                 <tr>
-                    <td><?php echo $data['post_title'];?></td>
+                    <td><a href="#"><?php echo $data['post_title'];?></a></td>
                     <td><?php echo $data['post_creator'];?></td>
                     <td><?php echo $data['post_date'];?></td>
                 </tr>

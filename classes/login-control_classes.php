@@ -1,6 +1,5 @@
 <?php
 
-    //File gia na kanw control to database
     class LoginContr extends Login{
 
         private $username;
@@ -16,6 +15,7 @@
 
         public function loginUser()
         {
+            //error checking
             if($this->emptyInput() == false)
             {
                 header("location: ../index.php?error=emptyInput");

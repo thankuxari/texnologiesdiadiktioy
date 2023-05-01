@@ -1,7 +1,7 @@
 <?php
 
-    //File gia na kanw sindesi me to database
-    class Dbh {
+    //File gia na kanw sindesi me to database logindb
+    class Dbh{
         
         protected function connect()
         {

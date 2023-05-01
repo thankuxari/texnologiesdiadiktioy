@@ -1,47 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css?v=<?php echo time(); ?>">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="icon" type="image/png" sizes="32x32" href="earth.png">
-    <title>Έγγραφη | Τεχνολογίες Διαδικτύου | Διαδικτυακή Κοινότητα </title>
-</head>
-
 <?php
 
-    if($_COOKIE["theme"] == "dark") {
-        $background = "#1A120B";
-        $backgroundheader = "#3C2A21";
-        $color = "white";
-        $colornav = "#d2b593";
-        $searchcolor = "#b09372";
-    } else {
-        $background = "#E5E5CB";
-        $backgroundheader = "#D5CEA3";
-    }
+    include('header.php');
 
 ?>
-
+<title>Έγγραφη | Τεχνολογίες Διαδικτύου | Διαδικτυακή Κοινότητα </title>
 <body style="background-color:<?php echo $background?>" class="login-body">
-    <header style="background-color:<?php echo $backgroundheader?>">
-        <h1 class="main-title" style="color: <?php echo $color?>">Τεχνολογιες Διαδικτυου</h1>
-        <nav>
-        <ul class="main-nav">
-            <li><a href="index.php">Αρχικη</a></li>
-            <li><a href="help.php">Βοηθεια</a></li>
-            <li><a href="forum.php">Φορουμ</a></li>
-            <li><a href="search.php">Αναζητηση</a></li>
-        </ul>
-        </nav>
-        <div class="buttons-container">
-            <button class="sign-btn" id="signButton" onclick="window.location.href='sign.php'">Sign in</button>
-            <button class="login-btn" id="loginButton" onclick="window.location.href='login.php'">Login</button>
-            <input type="checkbox" id="theme-Picker" class="theme-btn" <?php if($_COOKIE["theme"]  == "dark") {echo "checked"; }?>>
-        </div>
-    </header>
+    <?php
+
+    include('header-navbar.php');
+
+    ?>
+    
     <main class="sign-main">
         <div class=sign-container style="background-color:<?php echo $backgroundheader?>">
             <form action="includes/sign_includes.php" method="post">

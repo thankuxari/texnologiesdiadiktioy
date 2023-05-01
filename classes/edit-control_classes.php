@@ -1,6 +1,5 @@
 <?php
 
-    //File gia na kanw control to database
     class EditContr extends Edit{
 
         private $name;
@@ -53,7 +52,6 @@
         }
 
         //Error handling gia email 
-
         private function invalidEmail()
         {
             if(!filter_var($this->email, FILTER_VALIDATE_EMAIL))
@@ -66,7 +64,6 @@
             return $result;
         }
 
-        //Error handling gia idio username h email
     }
 
 ?>

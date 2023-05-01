@@ -1,6 +1,5 @@
 <?php
 
-    //File gia na kanw control to database
     class PostContr extends Post{
 
         private $title;

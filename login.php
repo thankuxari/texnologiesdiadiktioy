@@ -3,21 +3,7 @@
     include('header.php');
 
 ?>
-
-<?php
-
-    if($_COOKIE["theme"] == "dark") {
-        $background = "#1A120B";
-        $backgroundheader = "#3C2A21";
-        $color = "white";
-        $colornav = "#d2b593";
-        $searchcolor = "#b09372";
-    } else {
-        $background = "#E5E5CB";
-        $backgroundheader = "#D5CEA3";
-    }
-
-?>
+<title>Είσοδος | Τεχνολογίες Διαδικτύου | Διαδικτυακή Κοινότητα </title>
 <body style="background-color:<?php echo $background?>">
     <?php
     

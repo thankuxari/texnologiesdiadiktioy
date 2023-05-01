@@ -12,8 +12,9 @@
 
     ?>
     <main class="help-main">
-        <div class="help-wrapper">
+        <div class="help-wrapper" style="background:<?php echo $insidecolor?>">
             <div class="help-container">
+                <h1 class="">Βοήθεια</h1>
                 <div class="accordion">
                     <div class="accordion-header" id="accordion-header">
                         <h4 class="accordion-title">Σκοπός Ιστότοπου</h4>

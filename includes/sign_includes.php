@@ -1,12 +1,14 @@
 <?php
 
-    /*SIGN_INCLUDE file me to opoio "mazevw" ta data gia na ta kanw handle
-    argotera me ta classes ena Login System*/
+    /*
+        Sign_includes xrisimopoieite gia na sileksw ta dedomena apo tin forma kai na ta kanw pass
+        sto sign_classes opoy to xrisimopoiw gia error checking kai na kalesw tin fuction gia eggrafi(setUser)
+    */
 
     if(isset($_POST["submit"]))
     {
         
-        //Pernw ta data apo to sign/login form
+        //Pernw ta data apo to sign form
         $name = $_POST["name"];
         $surname = $_POST["surname"];
         $username = $_POST["username"];

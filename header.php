@@ -23,10 +23,11 @@
         $backgroundheader = "#3C2A21";
         $color = "white";
         $colornav = "#d2b593";
-        $searchcolor = "#b09372";
+        $insidecolor = "#b09372";
     } else {
         $background = "#E5E5CB";
         $backgroundheader = "#D5CEA3";
+        $insidecolor = "#cfbba1";
     }
 
 ?>

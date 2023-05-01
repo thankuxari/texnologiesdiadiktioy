@@ -3,7 +3,7 @@
     if(isset($_POST["submit"]))
     {
         
-        //Pernw ta data apo to sign/login form
+        //Pernw ta data apo to post form
         $title = $_POST["title"];
         $content = $_POST["content"];
         $date = date("y-m-d");

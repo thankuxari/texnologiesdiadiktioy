@@ -13,14 +13,14 @@
     ?>
 
     <main>
-        <div class=search-container style="background-color: <?php echo $searchcolor?>">
+        <div class=search-container style="background-color: <?php echo $insidecolor?>">
             <label for="search" style="color:<?php echo $color?>">Αναζήτηση</label>
             <div class="searchbar">
                 <input type="search" id="searchBar" placeholder="Αναζήτηση">
                 <button type="submit"><img src="search-interface-symbol.png"></button>
             </div>        
         </div>
-        <div class="accordion-container" style="background-color:<?php echo $searchcolor?>">
+        <div class="accordion-container" style="background-color:<?php echo $insidecolor?>">
             <div class="left-container">
                 <div class="accordion">
                     <div class="accordion-header" id="accordion-header">

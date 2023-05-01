@@ -73,6 +73,7 @@ header ul li a{
     border:none;
     background-color: transparent;
     cursor: pointer;
+    color: #7e7e7e;
     transition: background-color 0.3s,border 0.3s,color 0.3s;
 }
 
@@ -92,7 +93,7 @@ header ul li a{
 }
 
     .login-btn:hover{
-        background-color: #6a5f40;
+        background-color: #a79665;
         color:white;
     }
 
@@ -126,7 +127,7 @@ header ul li a{
     }
 
     .theme-btn:checked{
-        background-color: #6a5f40;
+        background-color: #a09169;
     }
 
     .theme-btn:checked:before{
@@ -146,7 +147,6 @@ main{
 .search-container{
     width: 90%;
     height: 25em;
-    background-color: #cfbba1;
     margin:2em;
     border-radius: 2em;
     display: flex;
@@ -190,7 +190,6 @@ main{
 .accordion-container{
     width: 90%;
     height: 25em;
-    background-color: #cfbba1;
     border-radius: 2em;
     display:flex;
     justify-content: space-around;
@@ -273,9 +272,9 @@ main{
     margin-top:2em;
     width: 85%;
     height: 50em;
-    background-color: burlywood;
     display: flex;
     justify-content: center;
+    border-radius: 2em;
 }
 
 .help-container{
@@ -283,6 +282,14 @@ main{
     display: flex;
     flex-direction: column;
     gap:2em
+}
+
+.help-container h1{
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    font-family: var(--title-font);
 }
 
 /*  ========================================================== 
@@ -399,7 +406,6 @@ main{
 }
 
 .profile-container{
-    background-color: burlywood;
     margin-top:-13em;
     width: 30%;
     height: 30em;
@@ -599,28 +605,60 @@ main{
 
 .forum-wrapper{
     margin-top:2em;
-    width: 90%;
+    width: 85%;
     height: 50em;
     background-color: burlywood;
     display: flex;
     justify-content: center;
+    border-radius: 2em;
 }
 
 .forum-container{
     margin-top:5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2em;
 }
 
     .forum-container .new-btn{
         background-color: rgb(37, 146, 37);
+        width: 50%;
     }
+
+    .forum-container .new-btn:hover{
+        background-color: rgb(39, 116, 39);
+    }
+
 
     .forum-container .new-notlogin-btn{
         background-color: #E74036;
+        width: 50%;
     }
 
+    .forum-container .new-notlogin-btn:hover{
+        background-color: #b8352e;
+    }
 
+.forum-container table{
+    width: 50em;
+    border:3px solid black;
+    font-family:var(--main-font);
+    border-radius: 0.4em;
+}
+    
+.forum-container td{
+    padding:0.3em;
+}
+    
+.forum-container a{
+    text-decoration: none;
+    color:black;
+}
 
-
+    .forum-container a:hover{
+        color:#e6e5e5
+    }
 
 /*  ========================================================== 
     CREATE-POST STYLING
@@ -637,7 +675,6 @@ main{
     flex-direction: column;
     gap:1em;
     padding:2em;
-    background-color: burlywood;
 }
 
 .create-post-form label{
@@ -654,4 +691,18 @@ main{
 
 .create-post-form textarea{
     height: 15em;
+}
+
+
+/*  ========================================================== 
+    SEARCH-POST STYLING
+    ==========================================================*/
+
+.search-wrapper{
+    margin-top:2em;
+    width: 85%;
+    height: 50em;
+    display: flex;
+    justify-content: center;
+    border-radius: 2em;
 }

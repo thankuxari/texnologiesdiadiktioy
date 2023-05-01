@@ -1,6 +1,5 @@
 <?php
 
-    //File gia na kanw control to database
     class SignupContr extends Signup{
 
         private $name;
@@ -22,6 +21,7 @@
 
         public function signupUser()
         {
+            //kalw tis function gia error checking prin kanw sign ton user 
             if($this->emptyInput() == false)
             {
                 header("location: ../index.php?error=emptyInput");
@@ -44,6 +44,7 @@
             }
 
             $this->setUser($this->name,$this->surname,$this->username,$this->password,$this->email);
+
         }
 
 
@@ -58,6 +59,7 @@
             }else{
                 $result = true;
             }
+
             return $result;
         }
 
@@ -72,12 +74,12 @@
             }else{
                 $result = true;
             }
+
             return $result;
 
         }
 
         //Error handling gia email 
-
         private function invalidEmail()
         {
             if(!filter_var($this->email, FILTER_VALIDATE_EMAIL))
@@ -87,7 +89,9 @@
             else{
                 $result = true;
             }
+
             return $result;
+            
         }
 
         //Error handling gia idio username h email

@@ -1,6 +1,5 @@
 <?php
 
-    //File gia na kanw control to database
     class DeleteContr extends Delete{
 
         private $name;

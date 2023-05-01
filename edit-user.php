@@ -4,20 +4,6 @@
 
 ?>
 <title>Επεξεργασία Προφίλ | Τεχνολογίες Διαδικτύου | Διαδικτυακή Κοινότητα </title>
-<?php
-
-    if($_COOKIE["theme"] == "dark") {
-        $background = "#1A120B";
-        $backgroundheader = "#3C2A21";
-        $color = "white";
-        $colornav = "#d2b593";
-        $searchcolor = "#b09372";
-    } else {
-        $background = "#E5E5CB";
-        $backgroundheader = "#D5CEA3";
-    }
-
-?>
 <body style="background-color:<?php echo $background?>">
     <?php
 
@@ -26,7 +12,7 @@
     ?>
 
     <main class="edit-user-main">
-        <div class="edit-user-container">
+        <div class="edit-user-container" style="background:<?php echo $insidecolor?>">
             <h1 class="main-title">Επεξεργασία</h1>
             <form action="includes/edit_includes.php" method="post">
                 <label for="name">Όνομα:</label>

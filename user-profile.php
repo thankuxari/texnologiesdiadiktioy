@@ -4,20 +4,6 @@
 
 ?>
 <title>Προφίλ | Τεχνολογίες Διαδικτύου | Διαδικτυακή Κοινότητα </title>
-<?php
-
-    if($_COOKIE["theme"] == "dark") {
-        $background = "#1A120B";
-        $backgroundheader = "#3C2A21";
-        $color = "white";
-        $colornav = "#d2b593";
-        $searchcolor = "#b09372";
-    } else {
-        $background = "#E5E5CB";
-        $backgroundheader = "#D5CEA3";
-    }
-
-?>
 <body style="background-color:<?php echo $background?>">
     
     <?php
@@ -26,7 +12,7 @@
 
     ?>
     <main class="user-profile-main">
-       <div class="profile-container">
+       <div class="profile-container" style="background:<?php echo $insidecolor?>">
             <h1 class="username-title"><?php echo $_SESSION["userud"]?></h1>
             <div class="name-surname-container">
                 <div class="line">

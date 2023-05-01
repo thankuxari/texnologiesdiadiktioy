@@ -4,20 +4,6 @@
 
 ?>
 <title>Αναζήτηση | Τεχνολογίες Διαδικτύου | Διαδικτυακή Κοινότητα </title>
-<?php
-
-    if($_COOKIE["theme"] == "dark") {
-        $background = "#1A120B";
-        $backgroundheader = "#3C2A21";
-        $color = "white";
-        $colornav = "#d2b593";
-        $searchcolor = "#b09372";
-    } else {
-        $background = "#E5E5CB";
-        $backgroundheader = "#D5CEA3";
-    }
-
-?>
 <body style="background-color:<?php echo $background?>">
     
     <?php
@@ -25,7 +11,16 @@
     include('header-navbar.php');
 
     ?>
-    <main>
+    <main class="search-main">
+        <div class="search-wrapper" style="background:<?php echo $insidecolor ?>">
+            <div class="search-container">
+                <label for="search" style="color:<?php echo $color?>">Αναζήτηση</label>
+                <div class="searchbar">
+                    <input type="search" id="searchBar" placeholder="Αναζήτηση">
+                    <button type="submit"><img src="search-interface-symbol.png"></button>
+                </div> 
+            </div>
+        </div>
     </main>
 
     <script>

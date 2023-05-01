@@ -1,6 +1,5 @@
 <?php 
 
-    
     include('classes/dbh_classes.php');
     include('classes/login_classes.php');
     class Delete extends Dbh{
@@ -9,7 +8,7 @@
         {
             
             session_start();
-            //Insert to username kai to password sto database
+            //sto id toy user update random hash
             $query = $this->connect()->prepare("UPDATE users SET user_name =?,user_surname =?, user_username =?, user_password =? , user_email =? WHERE user_id = '$_SESSION[userid]' ;");
             
 
