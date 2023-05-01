@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root{
-    --main-font: 'Montserrat',sans-serif;
+    --main-font: 'Roboto',sans-serif;
     --title-font: 'Overpass',sans-serif;
     --main-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
 }
@@ -47,7 +48,6 @@ header ul li a{
     color:white;
     text-transform: uppercase;
     text-decoration: none;
-    font-style: italic;
     font-weight: bold;
     font-size: 1.2rem;
     color:#b09372;
@@ -263,6 +263,26 @@ main{
     object-fit: cover;
     border-radius: 1.1em;
     border:8px solid black;
+}
+
+/*  ========================================================== 
+    HELP STYLING
+    ==========================================================*/
+
+.help-wrapper{
+    margin-top:2em;
+    width: 85%;
+    height: 50em;
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+}
+
+.help-container{
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    gap:2em
 }
 
 /*  ========================================================== 
@@ -573,5 +593,65 @@ main{
         background-color: #b8352e;
     }
 
+/*  ========================================================== 
+    FORUM STYLING
+    ==========================================================*/
+
+.forum-wrapper{
+    margin-top:2em;
+    width: 90%;
+    height: 50em;
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+}
+
+.forum-container{
+    margin-top:5em;
+}
+
+    .forum-container .new-btn{
+        background-color: rgb(37, 146, 37);
+    }
+
+    .forum-container .new-notlogin-btn{
+        background-color: #E74036;
+    }
 
 
+
+
+
+/*  ========================================================== 
+    CREATE-POST STYLING
+    ==========================================================*/
+
+.create-post-main{
+    min-height: 80vh;
+}
+
+.create-post-main .create-post-form{
+    width: 50%;
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    padding:2em;
+    background-color: burlywood;
+}
+
+.create-post-form label{
+    font-size:2rem;
+    font-family: var(--title-font);
+}
+
+.create-post-form input,
+.create-post-form textarea{
+    font-size:1.5rem;
+    padding:0.3rem;
+    font-family: var(--main-font);
+}
+
+.create-post-form textarea{
+    height: 15em;
+}

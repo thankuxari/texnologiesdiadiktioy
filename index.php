@@ -4,7 +4,7 @@
 
 ?>
 <title>Αρχική | Τεχνολογίες Διαδικτύου | Διαδικτυακή Κοινότητα </title>
-<body style="background-color:<?php echo $background?>">
+<body style="background:<?php echo $background?>">
 
     <?php
 

@@ -4,27 +4,44 @@
 
 ?>
 <title>Βοήθεια | Τεχνολογίες Διαδικτύου | Διαδικτυακή Κοινότητα </title>
-<?php
 
-    if($_COOKIE["theme"] == "dark") {
-        $background = "#1A120B";
-        $backgroundheader = "#3C2A21";
-        $color = "white";
-        $colornav = "#d2b593";
-        $searchcolor = "#b09372";
-    } else {
-        $background = "#E5E5CB";
-        $backgroundheader = "#D5CEA3";
-    }
-
-?>
 <body style="background-color:<?php echo $background?>">
     <?php
 
     include('header-navbar.php');
 
     ?>
-    <main>
+    <main class="help-main">
+        <div class="help-wrapper">
+            <div class="help-container">
+                <div class="accordion">
+                    <div class="accordion-header" id="accordion-header">
+                        <h4 class="accordion-title">Σκοπός Ιστότοπου</h4>
+                        <div class="icon-btn">
+                            <i class="op-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-answer">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi totam dolore iure, quisquam consectetur cupiditate laborum porro fugit impedit quam pariatur, voluptates similique voluptatem voluptatum eligendi distinctio! Voluptatem, similique consequatur.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <h4 class="accordion-title">Βασική Βοήθεια</h4>
+                        <div class="icon-btn">
+                            <i class="op-chevron-down"></i>
+                        </div>
+                        </div>
+                    <div class="accordion-answer">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi totam dolore iure, quisquam consectetur cupiditate laborum porro fugit impedit quam pariatur, voluptates similique voluptatem voluptatum eligendi distinctio! Voluptatem, similique consequatur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <script>
@@ -40,5 +57,8 @@
             }
         });
     </script>
+
+    <script src="accordion.js"></script>
+
 </body>
 </html>

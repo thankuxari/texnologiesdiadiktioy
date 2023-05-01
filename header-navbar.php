@@ -1,4 +1,4 @@
-<header style="background-color:<?php echo $backgroundheader?>">
+<header style="background:<?php echo $backgroundheader?>">
         <h1 class="main-title" style="color: <?php echo $color?>">Τεχνολογιες Διαδικτυου</h1>
         <nav>
         <ul class="main-nav">

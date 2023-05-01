@@ -24,7 +24,53 @@
     include('header-navbar.php');
 
     ?>
-    <main>
+    <main class="forum-main">
+        <div class="forum-wrapper">
+            <div class="forum-container">
+                <?php
+                    if(isset($_SESSION["userud"]))
+                    {
+                ?>
+                    <button class="new-btn btn" onclick="window.location.href='create-post.php'">New Post</button>
+                    
+                <?php
+                    }
+                    else
+                    {
+                ?>
+                    <button class="new-notlogin-btn btn" onclick="window.location.href='login.php'">Login</button>
+                <?php
+                    }
+                ?>
+
+                <?php
+                    $conn = new PDO("mysql:host=localhost;dbname=forumdb","root","");
+                    $query = "SELECT * FROM post";
+                    $view = $conn->query($query);
+                ?>
+                <table border="3" cellpading="5" cellspacing="5">
+                    <tr>
+                        <th>Title:</th>
+                        <th>Creator:</th>
+                        <th>Date:</th>
+                    </tr>
+                <?php
+                
+                    foreach($view as $data)
+                    {
+                ?>
+                <tr>
+                    <td><?php echo $data['post_title'];?></td>
+                    <td><?php echo $data['post_creator'];?></td>
+                    <td><?php echo $data['post_date'];?></td>
+                </tr>
+                <?php
+                    }
+                ?>
+                </table>
+            </div>
+        
+        </div>
     </main>
 
     <script>
