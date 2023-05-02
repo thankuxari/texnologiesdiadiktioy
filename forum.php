@@ -46,7 +46,7 @@
                     {
                 ?>
                 <tr>
-                    <td><a href="#"><?php echo $data['post_title'];?></a></td>
+                    <td><a href="post-view.php?id=<?php echo $data['post_id']?>"><?php echo $data['post_title'];?></a></td>
                     <td><?php echo $data['post_creator'];?></td>
                     <td><?php echo $data['post_date'];?></td>
                 </tr>

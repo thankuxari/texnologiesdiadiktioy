@@ -17,6 +17,7 @@
                 header("location: ../index.php?error=queryfailed");
                 exit();
             }
+            
             $query = null;
         }
     }
