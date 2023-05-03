@@ -675,6 +675,7 @@ main{
     flex-direction: column;
     gap:1em;
     padding:2em;
+    border-radius: 1.1em;
 }
 
 .create-post-form label{
@@ -693,6 +694,53 @@ main{
     height: 15em;
 }
 
+/*  ========================================================== 
+    POST-VIEW STYLING
+    ==========================================================*/
+
+.post-view-wrapper{
+    margin-top:2em;
+    width: 85%;
+    height: 50em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2em;
+}
+
+
+
+.post-view-container{
+    margin-top:5em;
+    height: 25%;  
+    display: flex;
+    justify-content: center;
+    gap:2em;
+}
+
+
+.post-view-container img{
+    width: 10em;
+    height: 10em;
+    border-radius: 1em;
+}
+
+.text-view-container h1{
+    font-family: var(--title-font);
+}
+
+.text-view-container .user-date-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.text-view-container p{
+    margin-top:0.5em;
+    border: 1px solid black;
+    height: 5em;
+    font-family: var(--main-font);
+    padding:0.5em;
+}
 
 /*  ========================================================== 
     SEARCH-POST STYLING

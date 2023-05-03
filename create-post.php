@@ -10,8 +10,8 @@
     include('header-navbar.php');
 
     ?>
-    <main class="create-post-main">
-        <form action="includes/post_includes.php" method="post" class="create-post-form">
+    <main class="create-post-main" >
+        <form action="includes/post_includes.php" method="post" class="create-post-form" style="background:<?php echo $insidecolor;?>">
             <label for="post-title">Τίτλος</label>
             <input type="text" name="title" placeholder="Title">
             <label for="main-text">Κυριώς Κείμενο</label>

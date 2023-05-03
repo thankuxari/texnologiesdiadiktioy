@@ -10,9 +10,10 @@
     include('header-navbar.php');
 
     ?>
-    <main class="post-view-main" style="background:<?php echo $insidecolor;?>">  
-        <div class="post-view-wrapper"> 
+    <main class="post-view-main">  
+        <div class="post-view-wrapper" style="background:<?php echo $insidecolor;?>"> 
             <div class="post-view-container">
+                <img src="blank-profile-picture-973460_960_720.webp">
                 <?php
                     $id = $_GET['id'];
                     $conn = new PDO("mysql:host=localhost;dbname=forumdb","root","");
@@ -21,12 +22,14 @@
                     foreach($view as $data)
                         {
                 ?>
+                <div class="text-view-container">
                     <h1><?php echo $data['post_title']?></h1>
                     <div class="user-date-container">
                         <h2>Created By:<?php echo $data['post_creator']?></h2>
-                        <h3>Posted on:<?php echo $data['post_date']?></h3>
+                        <h2>Posted on:<?php echo $data['post_date']?></h2>
                     </div>
                     <p><?php echo $data['post_content']?></p>
+                </div>
                 <?php
                         }
                 ?>
