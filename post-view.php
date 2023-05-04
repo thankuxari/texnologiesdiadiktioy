@@ -34,6 +34,8 @@
                         }
                 ?>
             </div>
+            <form>
+            <textarea class="replay" placeholder="Απάντηση(required)"></textarea>
             <div class="btn-container">
                 <button class="btn" type="button" onclick="window.location.href='forum.php'">Πίσω</button>
                 <?php 
@@ -42,8 +44,9 @@
                         {
                 ?>
                 <input type="submit" name="submit" value="Σχολίασε">
+                </form>
                 <?php
-                
+
                         }else{
                 ?>
                 <button class="new-notlogin-btn btn" onclick="window.location.href='login.php'">Login</button>

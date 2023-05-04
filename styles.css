@@ -762,6 +762,19 @@ main{
     margin:0;
 }
 
+.post-view-wrapper form{
+    margin:0 auto;
+}
+.post-view-wrapper textarea{
+    width: 18em;
+    height:4em;
+    font-size:1.5rem;
+    padding:0.3rem;
+    font-family: var(--main-font);
+    margin-bottom: 1em;
+    border-radius: 0.3em;
+}
+
 .post-view-wrapper input[type="submit"]{
     padding:1em 2em;
     font-size: 1rem;
