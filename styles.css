@@ -503,7 +503,6 @@ main{
 }
 
 .edit-user-container{
-    background-color: burlywood;
     width: 30%;
     height: 40em;
     display: flex;
@@ -548,14 +547,33 @@ main{
         color:black;
     }
 
-.edit-user-container input[type = "submit"]{
-    width: 50%;
-    margin:0 auto;
-    padding:0;
-    margin-top:1.1em;
-    cursor: pointer;
-    font-size:1.3rem;
+.edit-user-container .btn-container{
+    margin-bottom:1em;
 }
+    
+.edit-user-container input[type = "submit"]{
+    padding:1em 2em;
+    font-size: 1rem;
+    font-weight: bold;
+    border:none;
+    border-radius: 3rem;
+    cursor: pointer;
+    box-shadow: var(--main-shadow);
+    transition: background-color 0.3s,border 0.3s,color 0.3s;
+    background-color: rgb(37, 146, 37);
+}
+
+.edit-user-container input[type = "submit"]:hover{
+    background-color:rgb(39, 116, 39);
+}
+
+.edit-user-container .cancel-btn{
+    background-color: #E74036;
+}
+
+    .edit-user-container .cancel-btn:hover{
+        background-color: #b8352e;
+    }
 
 
 /*  ========================================================== 
@@ -567,7 +585,6 @@ main{
 }
 
 .delete-user-container{
-    background-color: burlywood;
     width: 30%;
     height: 20em;
     display: flex;
@@ -607,7 +624,6 @@ main{
     margin-top:2em;
     width: 85%;
     height: 50em;
-    background-color: burlywood;
     display: flex;
     justify-content: center;
     border-radius: 2em;
@@ -742,6 +758,21 @@ main{
     padding:0.5em;
 }
 
+.post-view-wrapper .btn-container{
+    margin:0;
+}
+
+.post-view-wrapper input[type="submit"]{
+    padding:1em 2em;
+    font-size: 1rem;
+    font-weight: bold;
+    border:none;
+    border-radius: 3rem;
+    cursor: pointer;
+    box-shadow: var(--main-shadow);
+    transition: background-color 0.3s,border 0.3s,color 0.3s;
+}
+
 /*  ========================================================== 
     SEARCH-POST STYLING
     ==========================================================*/
@@ -753,4 +784,33 @@ main{
     display: flex;
     justify-content: center;
     border-radius: 2em;
+}
+
+.search-wrapper form{
+    width: 100%;
+    display: flex;
+}
+
+.search-result-container{
+    width: 30em;
+}
+
+.search-result-container h1{
+    font-family: var(--title-font);
+    font-size:1.4rem;
+}
+
+    .search-result-container a{
+        text-decoration: none;
+        color:black;
+    }
+
+.search-result-container h2{
+    font-family: var(--main-font);
+    font-size:0.9rem;
+}
+
+.post-creator-date-result-container{
+    display: flex;
+    gap:3em;
 }

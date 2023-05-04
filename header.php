@@ -1,6 +1,8 @@
 <?php
 
     session_start();
+    require('classes/dbh_classes.php');
+    require('classes/dbh-forum_classes.php');
 
 ?>
 

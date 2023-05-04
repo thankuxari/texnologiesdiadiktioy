@@ -11,7 +11,7 @@
 
     ?>
     <main class="login-main">
-        <div class="login-container" style="background-color:<?php echo $backgroundheader?>">
+        <div class="login-container" style="background-color:<?php echo $insidecolor?>">
             <form action="includes/login_includes.php" method="post">
                 <h1>Είσοδος</h1>
                 <input type="text" name="username" placeholder="Username">

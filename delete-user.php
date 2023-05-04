@@ -12,7 +12,7 @@
 
     ?>
     <main class="delete-user-main">
-       <div class="delete-user-container">
+       <div class="delete-user-container" style="background:<?php echo $insidecolor;?>">
             <p>Είσαι σίγουρος/η πως θες να διαγράψεις τον λογαριασμό σου ?</p>
             <div class="btn-container">
                 <form action="includes/delete_includes.php" method="post">

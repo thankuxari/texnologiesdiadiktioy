@@ -25,7 +25,10 @@
                 <input type="password" name="password" value="*****">
                 <label for="email">Email:</label>
                 <input for="text" name="email" value="<?php echo $_SESSION["user_email"]?>">
-                <input type="submit" name="submit" value="Confirm">
+                <div class="btn-container">
+                    <input type="submit" name="submit" value="Confirm">
+                    <button class="cancel-btn btn" type="button" onclick="window.location.href='user-profile.php'">Πίσω</button>
+                </div>
             </form>
         </div>
     </main>

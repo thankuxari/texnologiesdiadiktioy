@@ -34,8 +34,26 @@
                         }
                 ?>
             </div>
+            <div class="btn-container">
+                <button class="btn" type="button" onclick="window.location.href='forum.php'">Πίσω</button>
+                <?php 
+                
+                        if(isset($_SESSION["userud"]))
+                        {
+                ?>
+                <input type="submit" name="submit" value="Σχολίασε">
+                <?php
+                
+                        }else{
+                ?>
+                <button class="new-notlogin-btn btn" onclick="window.location.href='login.php'">Login</button>
+                <?php
+                
+                        }
+                
+                ?>
+            </div>
         </div>
-            
     </main>
     <script>
         $("#theme-Picker").on('change',function(){

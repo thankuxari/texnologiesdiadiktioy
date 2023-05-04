@@ -12,7 +12,7 @@
     ?>
     
     <main class="sign-main">
-        <div class=sign-container style="background-color:<?php echo $backgroundheader?>">
+        <div class=sign-container style="background-color:<?php echo $insidecolor?>">
             <form action="includes/sign_includes.php" method="post">
                 <h1 style="color:<?php echo $color?>">Εγγραφή</h1>
                 <label for="name">Όνομα:</label>
