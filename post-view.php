@@ -15,7 +15,9 @@
             <div class="post-view-container">
                 <img src="blank-profile-picture-973460_960_720.webp">
                 <?php
+                    session_start();
                     $id = $_GET['id'];
+                    $_SESSION['post_id'] = $id;
                     $conn = new PDO("mysql:host=localhost;dbname=forumdb","root","");
                     $query = "SELECT * FROM post WHERE post_id = $id";
                     $view = $conn->query($query);
@@ -34,8 +36,8 @@
                         }
                 ?>
             </div>
-            <form>
-            <textarea class="replay" placeholder="Απάντηση(required)"></textarea>
+            <form action="includes/comment_includes.php" method="post">
+            <textarea class="reply" name="comment" placeholder="Απάντηση(required)"></textarea>
             <div class="btn-container">
                 <button class="btn" type="button" onclick="window.location.href='forum.php'">Πίσω</button>
                 <?php 
@@ -46,7 +48,7 @@
                 <input type="submit" name="submit" value="Σχολίασε">
                 </form>
                 <?php
-
+                        
                         }else{
                 ?>
                 <button class="new-notlogin-btn btn" onclick="window.location.href='login.php'">Login</button>
@@ -56,6 +58,25 @@
                 
                 ?>
             </div>
+            <?php
+                    $conn = new PDO("mysql:host=localhost;dbname=forumdb","root","");
+                    $query2 =  "SELECT * FROM comment WHERE comment_id = $id";
+                    $view2 = $conn->query($query2);
+                    foreach($view2 as $data2)
+                        {
+                ?>
+                <div class="comment-wrapper">
+                    <div class="comment-section">
+                        <div class="comment-container">
+                            <h3><?php echo $data2["comment_creator"]?> commented:</h3>
+                            <p><?php echo $data2["comment_content"]?></p>
+                            <p>Date: <?php echo $data2["comment_date"]?></p>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                        }
+                ?>
         </div>
     </main>
     <script>

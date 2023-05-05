@@ -6,6 +6,14 @@
             <li><a href="help.php">Βοηθεια</a></li>
             <li><a href="forum.php">Φορουμ</a></li>
             <li><a href="search.php">Αναζητηση</a></li>
+            <?php 
+                if(isset($_SESSION["userud"]))
+                {
+            ?>
+            <li><a href="xml.php">XML</a></li>
+            <?php
+                }
+            ?>
         </ul>
         </nav>
         <div class="buttons-container">

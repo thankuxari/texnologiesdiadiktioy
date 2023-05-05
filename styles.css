@@ -786,6 +786,31 @@ main{
     transition: background-color 0.3s,border 0.3s,color 0.3s;
 }
 
+
+.post-view-wrapper .comment-wrapper{
+    margin:0 auto;
+    width: 35em;
+    overflow:hidden;
+    overflow-y:scroll;
+}
+.post-view-wrapper .comment-container{
+    margin:1.1em  auto;
+    width: 30em;
+    background-color: #E4E6E7;
+    border-radius: 0.5em;
+    padding:0.5em;
+}
+
+.comment-section h3{
+    font-family: var(--title-font);
+}
+
+.comment-section p{
+    font-family: var(--main-font);
+}
+
+
+
 /*  ========================================================== 
     SEARCH-POST STYLING
     ==========================================================*/
