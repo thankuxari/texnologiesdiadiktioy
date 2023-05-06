@@ -52,6 +52,7 @@
                         }else{
                 ?>
                 <button class="new-notlogin-btn btn" onclick="window.location.href='login.php'">Login</button>
+                </form>
                 <?php
                 
                         }
@@ -72,11 +73,12 @@
                             <p><?php echo $data2["comment_content"]?></p>
                             <p>Date: <?php echo $data2["comment_date"]?></p>
                         </div>
+                        <?php
+                        }
+                    ?>
                     </div>
                 </div>
-                <?php
-                        }
-                ?>
+                
         </div>
     </main>
     <script>

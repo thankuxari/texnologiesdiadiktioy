@@ -16,8 +16,8 @@
         <div class=search-container style="background-color: <?php echo $insidecolor?>">
             <label for="search" style="color:<?php echo $color?>">Αναζήτηση</label>
             <div class="searchbar">
-                <input type="search" id="searchBar" placeholder="Αναζήτηση">
-                <button type="submit"><img src="search-interface-symbol.png"></button>
+                <input type="search" id="searchBar" placeholder="Αναζήτηση" onkeypress="window.location.href='search.php'">
+                <button type="submit"><img src="search-interface-symbol.png" onclick="window.location.href='search.php'"></button>
             </div>        
         </div>
         <div class="accordion-container" style="background-color:<?php echo $insidecolor?>">

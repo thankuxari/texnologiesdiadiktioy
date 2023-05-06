@@ -723,8 +723,6 @@ main{
     border-radius: 2em;
 }
 
-
-
 .post-view-container{
     margin-top:5em;
     height: 25%;  
@@ -785,7 +783,6 @@ main{
     box-shadow: var(--main-shadow);
     transition: background-color 0.3s,border 0.3s,color 0.3s;
 }
-
 
 .post-view-wrapper .comment-wrapper{
     margin:0 auto;
